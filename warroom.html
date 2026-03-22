@@ -29,6 +29,8 @@ body{font-family:'Inter',sans-serif;background:#0a0a1a;color:#fff;min-height:100
 .status-aprovado{background:#34D399;box-shadow:0 0 8px rgba(52,211,153,0.5)}
 .status-publicado{background:#60A5FA;box-shadow:0 0 8px rgba(96,165,250,0.5)}
 .status-rejeitado{background:#F87171;box-shadow:0 0 8px rgba(248,113,113,0.5)}
+.status-planejamento{background:#A78BFA;box-shadow:0 0 8px rgba(167,139,250,0.5)}
+.status-planejado{background:#38BDF8;box-shadow:0 0 8px rgba(56,189,248,0.5)}
 .pac-card{border-radius:14px;padding:16px;border:1px solid rgba(107,78,155,0.15);background:rgba(15,10,35,0.5);backdrop-filter:blur(10px);transition:all .3s;cursor:pointer}
 .pac-card:hover{border-color:rgba(107,78,155,0.35);transform:translateY(-2px);box-shadow:0 8px 30px rgba(107,78,155,0.12)}
 .playlist-item{padding:12px 16px;border-radius:12px;border:1px solid rgba(107,78,155,0.08);background:rgba(15,10,30,0.3);transition:all .3s;cursor:pointer}
@@ -124,6 +126,16 @@ select option{background:#0a0a1a;color:#fff}
         <span class="text-[10px] text-[#8892A4] uppercase tracking-wider">Aprovados</span>
       </div>
       <div class="flex items-center gap-2 glass px-4 py-2">
+        <div class="status-dot status-planejamento"></div>
+        <span class="text-xs font-bold text-[#A78BFA]" id="countPlanejamento">0</span>
+        <span class="text-[10px] text-[#8892A4] uppercase tracking-wider">Em Planej.</span>
+      </div>
+      <div class="flex items-center gap-2 glass px-4 py-2">
+        <div class="status-dot status-planejado"></div>
+        <span class="text-xs font-bold text-[#38BDF8]" id="countPlanejado">0</span>
+        <span class="text-[10px] text-[#8892A4] uppercase tracking-wider">Planejados</span>
+      </div>
+      <div class="flex items-center gap-2 glass px-4 py-2">
         <div class="status-dot status-publicado"></div>
         <span class="text-xs font-bold text-[#60A5FA]" id="countPublicado">0</span>
         <span class="text-[10px] text-[#8892A4] uppercase tracking-wider">Publicados</span>
@@ -184,19 +196,7 @@ select option{background:#0a0a1a;color:#fff}
         <div class="glass p-5" style="border-radius:20px">
           <h3 class="text-sm font-black tracking-wider uppercase text-[#A89FC0] mb-4">📈 Metricas Sucesso</h3>
           <div class="space-y-3" id="metricasContent">
-            <div class="flex items-center justify-between">
-              <span class="text-xs text-[#8892A4]">Alcance medio</span>
-              <span class="text-sm font-bold text-[#F5D770]">—</span>
-            </div>
-            <div class="flex items-center justify-between">
-              <span class="text-xs text-[#8892A4]">Engajamento medio</span>
-              <span class="text-sm font-bold text-[#F5D770]">—</span>
-            </div>
-            <div class="flex items-center justify-between">
-              <span class="text-xs text-[#8892A4]">Melhor post</span>
-              <span class="text-sm font-bold text-[#F5D770]">—</span>
-            </div>
-            <p class="text-[10px] text-[#8892A4] italic mt-2">Dados manuais por hora. Meta API futura.</p>
+            <!-- Updated by JS -->
           </div>
         </div>
       </div>
@@ -349,13 +349,13 @@ const LP_ACTIVE = [true,false,false,false,false,false,false,false,false,false];
 
 // ========== SEED DATA ==========
 function seedData(){
-  if(localStorage.getItem('wr_seeded')) return;
+  if(localStorage.getItem('wr_seeded_v2')) return;
   // Seed PACs
   const pacs = [
-    {id:'pac1',date:'2026-03-20',status:'publicado',mandamento:1,tema:'Por que seu time nao se importa com o trabalho',entregaveis:{linkedin:{legenda:'Post sobre proposito...'},carrossel:{capa:'Capa: Seu time nao se importa',meios:['Card 2: Dados de turnover','Card 3: Exercicio pratico'],cta:'CTA: Marque um lider'},reels:{roteiro:'Gancho: 73% dos lideres...'},storyad:{roteiro:'Story 1: Voce sabia que...'}}},
+    {id:'pac1',date:'2026-03-20',status:'publicado',mandamento:1,tema:'Por que seu time nao se importa com o trabalho',metricas:{alcance:3200,likes:187,comentarios:42,salvos:28,compartilhamentos:15},entregaveis:{linkedin:{legenda:'Post sobre proposito...'},carrossel:{capa:'Capa: Seu time nao se importa',meios:['Card 2: Dados de turnover','Card 3: Exercicio pratico'],cta:'CTA: Marque um lider'},reels:{roteiro:'Gancho: 73% dos lideres...'},storyad:{roteiro:'Story 1: Voce sabia que...'}}},
     {id:'pac2',date:'2026-03-22',status:'pendente',mandamento:2,tema:'A revolucao hibrida: lideres que orquestram gente e IA',entregaveis:{linkedin:{legenda:'Post sobre lideranca hibrida...'},carrossel:{capa:'Capa: Lider Hibrido',meios:['Card 2: Jensen Huang projeta...','Card 3: Correlacao 0.81'],cta:'CTA: Comente QUERO'},reels:{roteiro:'Gancho: Jensen Huang projeta 100M agentes...'},storyad:{roteiro:'Story 1: A revolucao silenciosa...'}}},
     {id:'pac3',date:'2026-03-24',status:'pendente',mandamento:5,tema:'De executor a estrategista: o salto que a IA permite',entregaveis:{linkedin:{legenda:'Post sobre discernimento...'},carrossel:{capa:'Capa: Pare de Fazer',meios:['Card 2: 80% do seu tempo...','Card 3: Framework PULSAR'],cta:'CTA: Marque um lider'},reels:{roteiro:'Gancho: Voce esta ocupado ou produtivo?'},storyad:{roteiro:'Story 1: O lider que mais trabalha...'}}},
-    {id:'pac4',date:'2026-03-25',status:'aprovado',mandamento:7,tema:'Superprodutividade sem burnout: o mito desmascarado',entregaveis:{linkedin:{legenda:'Post sobre produtividade real...'},carrossel:{capa:'Capa: Produtividade e Vida',meios:['Card 2: Estudos NBER','Card 3: Metodo 3 prioridades'],cta:'CTA: Comente PRODUTIVIDADE'},reels:{roteiro:'Gancho: Produtividade nao e fazer mais...'},storyad:{roteiro:'Story 1: Trabalhar 12h...'}}},
+    {id:'pac4',date:'2026-03-25',status:'planejado',mandamento:7,tema:'Superprodutividade sem burnout: o mito desmascarado',entregaveis:{linkedin:{legenda:'Post sobre produtividade real...'},carrossel:{capa:'Capa: Produtividade e Vida',meios:['Card 2: Estudos NBER','Card 3: Metodo 3 prioridades'],cta:'CTA: Comente PRODUTIVIDADE'},reels:{roteiro:'Gancho: Produtividade nao e fazer mais...'},storyad:{roteiro:'Story 1: Trabalhar 12h...'}}},
   ];
   localStorage.setItem('wr_pacs',JSON.stringify(pacs));
   // Seed leads
@@ -367,7 +367,7 @@ function seedData(){
     {id:'l5',nome:'Roberto Mendes',email:'roberto@industria.com',telefone:'41955443322',cargo:'Supervisor de Operacoes',dor:'tempo',tamanho_time:'50+',origem:'m1-porque',pagina:'Comece Pelo Porque',pipeline:'novo',timestamp:'2026-03-22T08:00:00Z'},
   ];
   localStorage.setItem('pulsarh_leads',JSON.stringify(leads));
-  localStorage.setItem('wr_seeded','1');
+  localStorage.setItem('wr_seeded_v2','1');
 }
 seedData();
 
@@ -410,7 +410,7 @@ function renderCalendar(){
     el.className='cal-day';
     const dateStr=`${currentYear}-${String(currentMonth+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
     if(today.getFullYear()===currentYear&&today.getMonth()===currentMonth&&today.getDate()===d) el.classList.add('today');
-    const dayPacs=pacs.filter(p=>p.date===dateStr);
+    const dayPacs=pacs.filter(p=>p.date===dateStr&&p.status!=='pendente'&&p.status!=='rejeitado');
     el.innerHTML=`<span class="day-num">${d}</span>`;
     if(dayPacs.length>0){
       const dots=document.createElement('div');
@@ -429,6 +429,8 @@ function updateCounters(){
   const monthPacs=pacs.filter(p=>{const d=new Date(p.date);return d.getMonth()===currentMonth&&d.getFullYear()===currentYear});
   document.getElementById('countPendente').textContent=monthPacs.filter(p=>p.status==='pendente').length;
   document.getElementById('countAprovado').textContent=monthPacs.filter(p=>p.status==='aprovado').length;
+  document.getElementById('countPlanejamento').textContent=monthPacs.filter(p=>p.status==='planejamento').length;
+  document.getElementById('countPlanejado').textContent=monthPacs.filter(p=>p.status==='planejado').length;
   document.getElementById('countPublicado').textContent=monthPacs.filter(p=>p.status==='publicado').length;
 }
 
@@ -462,8 +464,9 @@ function pacAction(id,action){
   const pacs=getPacs();
   const idx=pacs.findIndex(p=>p.id===id);
   if(idx===-1) return;
-  if(action==='aprovado'||action==='publicado'){
+  if(['aprovado','planejamento','planejado','publicado'].includes(action)){
     pacs[idx].status=action;
+    if(action==='publicado'&&!pacs[idx].metricas){pacs[idx].metricas={alcance:0,likes:0,comentarios:0,salvos:0,compartilhamentos:0};}
     savePacs(pacs);
   } else if(action==='rejeitado'){
     const bl=getBlacklist();
@@ -480,33 +483,99 @@ function pacAction(id,action){
   renderAll();
 }
 
+function saveMetricas(id){
+  const pacs=getPacs();
+  const idx=pacs.findIndex(p=>p.id===id);
+  if(idx===-1) return;
+  pacs[idx].metricas={
+    alcance:parseInt(document.getElementById('met_alcance_'+id).value)||0,
+    likes:parseInt(document.getElementById('met_likes_'+id).value)||0,
+    comentarios:parseInt(document.getElementById('met_comentarios_'+id).value)||0,
+    salvos:parseInt(document.getElementById('met_salvos_'+id).value)||0,
+    compartilhamentos:parseInt(document.getElementById('met_compartilhamentos_'+id).value)||0
+  };
+  savePacs(pacs);
+  renderAll();
+  alert('Metricas salvas!');
+}
+
 // ========== PLAYLIST ==========
 function renderPlaylist(){
   const pacs=getPacs().filter(p=>p.status==='publicado');
   const list=document.getElementById('playlistList');
   if(pacs.length===0){list.innerHTML='<p class="text-[#8892A4] text-sm text-center py-4">Nenhum publicado ainda</p>';return;}
-  list.innerHTML=pacs.map((p,i)=>`
-    <div class="playlist-item flex items-center gap-3">
-      <span class="text-[#8B5CF6] font-black text-sm">${String(i+1).padStart(2,'0')}</span>
-      <div class="flex-1 min-w-0">
-        <p class="text-xs font-bold text-white truncate">${p.tema}</p>
-        <p class="text-[10px] text-[#8892A4]">M${p.mandamento} · ${p.date}</p>
+  list.innerHTML=pacs.map((p,i)=>{
+    const m=p.metricas||{};
+    const hasMetrics=(m.alcance||0)+(m.likes||0)+(m.comentarios||0)>0;
+    return `
+    <div class="playlist-item">
+      <div class="flex items-center gap-3">
+        <span class="text-[#8B5CF6] font-black text-sm">${String(i+1).padStart(2,'0')}</span>
+        <div class="flex-1 min-w-0">
+          <p class="text-xs font-bold text-white truncate">${p.tema}</p>
+          <p class="text-[10px] text-[#8892A4]">M${p.mandamento} · ${p.date}</p>
+        </div>
+        <div class="status-dot status-publicado"></div>
       </div>
-      <div class="status-dot status-publicado"></div>
-    </div>
-  `).join('');
+      ${hasMetrics?`<div class="flex gap-3 mt-2 pl-8">
+        <span class="text-[10px] text-[#F5D770]">👁 ${m.alcance.toLocaleString()}</span>
+        <span class="text-[10px] text-[#F87171]">❤ ${m.likes}</span>
+        <span class="text-[10px] text-[#60A5FA]">💬 ${m.comentarios}</span>
+        <span class="text-[10px] text-[#34D399]">📌 ${m.salvos||0}</span>
+      </div>`:''}
+    </div>`;
+  }).join('');
 }
 
 // ========== MODAL ==========
+function getStatusBadgeClass(s){return s==='pendente'?'gold':s==='aprovado'?'green':s==='planejamento'?'purple':s==='planejado'?'blue':s==='publicado'?'blue':'red';}
+function getStatusLabel(s){const m={'pendente':'PENDENTE','aprovado':'APROVADO','planejamento':'EM PLANEJAMENTO','planejado':'PLANEJADO','publicado':'PUBLICADO','rejeitado':'REJEITADO'};return m[s]||s.toUpperCase();}
+
+function calendarActions(p){
+  const s=p.status;
+  let btns='';
+  if(s==='aprovado'){
+    btns=`<button onclick="pacAction('${p.id}','planejamento');closeModal();renderAll()" class="btn-action" style="background:rgba(167,139,250,0.1);color:#A78BFA;border:1px solid rgba(167,139,250,0.3)">📝 Em Planejamento</button>
+    <button onclick="pacAction('${p.id}','planejado');closeModal();renderAll()" class="btn-action btn-schedule">📅 Planejado</button>
+    <button onclick="pacAction('${p.id}','edit');closeModal()" class="btn-action btn-edit">✏️ Voltar ao Pulse</button>`;
+  } else if(s==='planejamento'){
+    btns=`<button onclick="pacAction('${p.id}','planejado');closeModal();renderAll()" class="btn-action btn-schedule">📅 Marcar Planejado</button>
+    <button onclick="pacAction('${p.id}','edit');closeModal()" class="btn-action btn-edit">✏️ Voltar ao Pulse</button>`;
+  } else if(s==='planejado'){
+    btns=`<button onclick="pacAction('${p.id}','publicado');closeModal();renderAll()" class="btn-action" style="background:rgba(96,165,250,0.1);color:#60A5FA;border:1px solid rgba(96,165,250,0.3)">🚀 Marcar Publicado</button>
+    <button onclick="pacAction('${p.id}','planejamento');closeModal();renderAll()" class="btn-action" style="background:rgba(167,139,250,0.1);color:#A78BFA;border:1px solid rgba(167,139,250,0.3)">⬅ Voltar Planejamento</button>`;
+  } else if(s==='publicado'){
+    btns=`<span class="text-xs text-[#34D399] font-bold">✅ Publicado — edite as metricas abaixo</span>`;
+  }
+  return btns;
+}
+
+function metricasSection(p){
+  if(p.status!=='publicado') return '';
+  const m=p.metricas||{alcance:0,likes:0,comentarios:0,salvos:0,compartilhamentos:0};
+  return `
+    <div class="mt-4 p-4 rounded-xl" style="background:rgba(200,168,120,0.04);border:1px solid rgba(200,168,120,0.15)">
+      <h5 class="text-xs font-black text-[#F5D770] uppercase tracking-wider mb-3">📈 Metricas de Sucesso</h5>
+      <div class="grid grid-cols-2 sm:grid-cols-5 gap-3 mb-3">
+        <div><label class="text-[10px] text-[#8892A4] block mb-1">Alcance</label><input type="number" id="met_alcance_${p.id}" value="${m.alcance}" class="w-full text-sm font-bold text-center"></div>
+        <div><label class="text-[10px] text-[#8892A4] block mb-1">Likes</label><input type="number" id="met_likes_${p.id}" value="${m.likes}" class="w-full text-sm font-bold text-center"></div>
+        <div><label class="text-[10px] text-[#8892A4] block mb-1">Comentarios</label><input type="number" id="met_comentarios_${p.id}" value="${m.comentarios}" class="w-full text-sm font-bold text-center"></div>
+        <div><label class="text-[10px] text-[#8892A4] block mb-1">Salvos</label><input type="number" id="met_salvos_${p.id}" value="${m.salvos}" class="w-full text-sm font-bold text-center"></div>
+        <div><label class="text-[10px] text-[#8892A4] block mb-1">Compartilh.</label><input type="number" id="met_compartilhamentos_${p.id}" value="${m.compartilhamentos}" class="w-full text-sm font-bold text-center"></div>
+      </div>
+      <button onclick="saveMetricas('${p.id}')" class="btn-action btn-schedule w-full text-center">💾 Salvar Metricas</button>
+    </div>`;
+}
+
 function openDayModal(date,dayPacs){
   const modal=document.getElementById('pacModal');
   document.getElementById('modalTitle').textContent='Pacotes — '+date;
   const body=document.getElementById('modalBody');
-  body.innerHTML=dayPacs.map(p=>`
+  body.innerHTML=dayPacs.filter(p=>p.status!=='pendente'&&p.status!=='rejeitado').map(p=>`
     <div class="glass p-5 mb-4">
       <div class="flex items-center gap-3 mb-3">
         <span class="badge badge-gold">M${p.mandamento}</span>
-        <span class="badge badge-${p.status==='pendente'?'gold':p.status==='aprovado'?'green':p.status==='publicado'?'blue':'red'}">${p.status.toUpperCase()}</span>
+        <span class="badge badge-${getStatusBadgeClass(p.status)}">${getStatusLabel(p.status)}</span>
       </div>
       <h4 class="text-base font-bold text-white mb-4">${p.tema}</h4>
       <div class="grid sm:grid-cols-2 gap-3">
@@ -528,15 +597,10 @@ function openDayModal(date,dayPacs){
           <p class="text-xs text-[#A89FC0]">${p.entregaveis.storyad.roteiro}</p>
         </div>
       </div>
-      <div class="flex gap-2 mt-4">
-        <button onclick="pacAction('${p.id}','aprovado');closeModal();renderAll()" class="btn-action btn-approve">✅ Aprovar</button>
-        <button onclick="pacAction('${p.id}','edit');closeModal()" class="btn-action btn-edit">✏️ Editar</button>
-        <button onclick="pacAction('${p.id}','schedule');closeModal();renderAll()" class="btn-action btn-schedule">📅 Agendar</button>
-        <button onclick="pacAction('${p.id}','rejeitado');closeModal();renderAll()" class="btn-action btn-reject">❌ Recusar</button>
-        ${p.status==='aprovado'?`<button onclick="pacAction('${p.id}','publicado');closeModal();renderAll()" class="btn-action" style="background:rgba(96,165,250,0.1);color:#60A5FA;border:1px solid rgba(96,165,250,0.3)">🚀 Publicar</button>`:''}
-      </div>
+      <div class="flex gap-2 mt-4 flex-wrap">${calendarActions(p)}</div>
+      ${metricasSection(p)}
     </div>
-  `).join('');
+  `).join('')||'<p class="text-[#8892A4] text-sm text-center py-8">Nenhum conteudo aprovado neste dia</p>';
   document.getElementById('modalActions').innerHTML='';
   modal.classList.add('show');
 }
@@ -716,8 +780,32 @@ function renderPerformance(){
   }).join('');
 }
 
+// ========== SIDEBAR METRICS ==========
+function renderSidebarMetrics(){
+  const pacs=getPacs().filter(p=>p.status==='publicado'&&p.metricas);
+  const div=document.getElementById('metricasContent');
+  if(pacs.length===0){div.innerHTML='<p class="text-[#8892A4] text-sm text-center py-4">Publique conteudos para ver metricas</p>';return;}
+  const totalAlcance=pacs.reduce((s,p)=>s+(p.metricas.alcance||0),0);
+  const totalLikes=pacs.reduce((s,p)=>s+(p.metricas.likes||0),0);
+  const totalComents=pacs.reduce((s,p)=>s+(p.metricas.comentarios||0),0);
+  const totalSalvos=pacs.reduce((s,p)=>s+(p.metricas.salvos||0),0);
+  const best=pacs.sort((a,b)=>(b.metricas.alcance||0)-(a.metricas.alcance||0))[0];
+  div.innerHTML=`
+    <div class="flex items-center justify-between"><span class="text-xs text-[#8892A4]">Alcance total</span><span class="text-sm font-bold text-[#F5D770]">${totalAlcance.toLocaleString()}</span></div>
+    <div class="flex items-center justify-between"><span class="text-xs text-[#8892A4]">Likes total</span><span class="text-sm font-bold text-[#F87171]">${totalLikes}</span></div>
+    <div class="flex items-center justify-between"><span class="text-xs text-[#8892A4]">Comentarios total</span><span class="text-sm font-bold text-[#60A5FA]">${totalComents}</span></div>
+    <div class="flex items-center justify-between"><span class="text-xs text-[#8892A4]">Salvos total</span><span class="text-sm font-bold text-[#34D399]">${totalSalvos}</span></div>
+    <div class="flex items-center justify-between"><span class="text-xs text-[#8892A4]">Alcance medio</span><span class="text-sm font-bold text-[#C8A878]">${Math.round(totalAlcance/pacs.length).toLocaleString()}</span></div>
+    <div class="mt-2 pt-2 border-t border-[rgba(107,78,155,0.1)]">
+      <span class="text-[10px] text-[#8892A4]">🏆 Melhor post:</span>
+      <p class="text-xs font-bold text-white mt-1 truncate">${best.tema}</p>
+      <p class="text-[10px] text-[#F5D770]">👁 ${(best.metricas.alcance||0).toLocaleString()}</p>
+    </div>
+    <p class="text-[10px] text-[#8892A4] italic mt-2">Input manual. Meta API futura.</p>`;
+}
+
 // ========== RENDER ALL ==========
-function renderAll(){renderCalendar();renderInbox();renderPlaylist();}
+function renderAll(){renderCalendar();renderInbox();renderPlaylist();renderSidebarMetrics();}
 renderAll();
 </script>
 
