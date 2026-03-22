@@ -760,7 +760,7 @@
     allLeads.push(lead);
     localStorage.setItem('pulsarh_leads', JSON.stringify(allLeads));
     // Envia lead para API do War Room (fire-and-forget)
-    fetch('http://72.60.6.61:52392/api/leads', {
+    fetch('https://pulsarh-warroom.vercel.app/api/leads', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(lead)
