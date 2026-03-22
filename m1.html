@@ -759,6 +759,12 @@
     const allLeads = JSON.parse(localStorage.getItem('pulsarh_leads') || '[]');
     allLeads.push(lead);
     localStorage.setItem('pulsarh_leads', JSON.stringify(allLeads));
+    // Envia lead para API do War Room (fire-and-forget)
+    fetch('http://72.60.6.61:52392/api/leads', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(lead)
+    }).catch(() => {});
     contentGate.classList.add('unlocked');
     form.style.display = 'none';
     formSuccess.classList.remove('hidden');
