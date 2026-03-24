@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>O Lider Que o Mercado Disputa — Presente Exclusivo | PulsarH.AI</title>
+<meta name="description" content="Receba gratuitamente o conteudo que esta transformando a forma como lideres conduzem times na era da IA. Aplicavel hoje. Sem teoria vazia.">
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+<style>
+  body { font-family: 'Inter', sans-serif; margin: 0; padding: 0; color: #fff; }
+  .bg-brand { background: linear-gradient(180deg, #42195a 0%, #2a1545 25%, #1a1a4a 50%, #0F1342 100%); }
+  .bg-brand-intense { background: linear-gradient(180deg, #1a0a2e 0%, #120d30 50%, #0a0a25 100%); }
+  .text-ai-gradient {
+    background: linear-gradient(135deg, #C8A878, #6B4E9B);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .glass { background: rgba(255,255,255,0.03); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.06); }
+  .glass-gold { background: rgba(200,168,120,0.04); backdrop-filter: blur(30px); border: 1px solid rgba(200,168,120,0.15); }
+  .glass-strong { background: rgba(9,9,11,0.85); backdrop-filter: blur(40px); border: 1px solid rgba(200,168,120,0.2); }
+  .glow-gold { box-shadow: 0 0 40px rgba(200,168,120,0.4); }
+  .glow-gold-hover:hover { box-shadow: 0 0 70px rgba(245,215,112,0.5); }
+  .pulse-cta { animation: pulse-glow 2s ease-in-out infinite alternate; }
+  @keyframes pulse-glow {
+    from { box-shadow: 0 0 30px rgba(200,168,120,0.3); }
+    to { box-shadow: 0 0 70px rgba(200,168,120,0.6); }
+  }
+  input, select, textarea {
+    background: rgba(255,255,255,0.06) !important;
+    border: 1px solid rgba(200,168,120,0.2) !important;
+    color: #fff !important;
+    transition: all 0.3s;
+  }
+  input:focus, select:focus, textarea:focus {
+    border-color: rgba(200,168,120,0.6) !important;
+    box-shadow: 0 0 25px rgba(200,168,120,0.12);
+    outline: none;
+  }
+  input::placeholder, textarea::placeholder { color: #8892A4 !important; }
+  select option { background: #1a1a2e; color: #fff; }
+  .content-gate { display: none; }
+  .content-gate.unlocked { display: block; }
+  .step-number {
+    width: 52px; height: 52px; min-width: 52px;
+    background: linear-gradient(135deg, rgba(200,168,120,0.15), rgba(107,78,155,0.1));
+    border: 1px solid rgba(200,168,120,0.3);
+    border-radius: 16px;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 900; color: #C8A878; font-size: 20px;
+    box-shadow: 0 0 20px rgba(200,168,120,0.1);
+  }
+  .gold-line {
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #C8A878, transparent);
+  }
+  .shimmer {
+    background: linear-gradient(110deg, transparent 20%, rgba(200,168,120,0.08) 40%, rgba(200,168,120,0.12) 50%, rgba(200,168,120,0.08) 60%, transparent 80%);
+    background-size: 200% 100%;
+    animation: shimmer 3s ease-in-out infinite;
+  }
+  @keyframes shimmer {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+  }
+  html { scroll-behavior: smooth; }
+</style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!-- NAVBAR -->
+<!-- ============================================ -->
+<nav class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-[#1a0a2e]/90 backdrop-blur-xl border-b border-[#C8A878]/[0.08]">
+  <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <img src="./assets/logo-pulsarh.png" alt="PulsarH" class="h-[36px] w-auto drop-shadow-[0_0_8px_rgba(200,168,120,0.3)]">
+      <span class="text-xl font-black tracking-tight">
+        <span class="text-white">PulsarH</span><span class="text-ai-gradient">.AI</span>
+      </span>
+    </div>
+    <a href="#hero-form" class="hidden sm:inline-flex px-6 py-2.5 rounded-full text-sm font-black tracking-widest uppercase text-[#020202] bg-[#C8A878] hover:bg-[#F5D770] transition-all duration-300 shadow-[0_0_20px_rgba(200,168,120,0.35)]">
+      QUERO MEU PRESENTE
+    </a>
+  </div>
+</nav>
+
+<!-- ============================================ -->
+<!-- HERO + FORMULARIO -->
+<!-- ============================================ -->
+<section class="relative overflow-hidden pt-28 pb-20 md:pt-36 md:pb-28 px-6 min-h-screen flex items-center bg-brand">
+  <!-- Glow orbs -->
+  <div class="absolute top-0 left-1/4 w-[700px] h-[700px] bg-[#6B4E9B] rounded-full blur-[180px] opacity-20 pointer-events-none"></div>
+  <div class="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-[#0F1342] rounded-full blur-[180px] opacity-25 pointer-events-none"></div>
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#C8A878] rounded-full blur-[220px] opacity-[0.08] pointer-events-none"></div>
+  <div class="absolute top-1/4 right-0 w-[300px] h-[300px] bg-[#F5D770] rounded-full blur-[150px] opacity-[0.05] pointer-events-none"></div>
+
+  <div class="relative z-10 max-w-6xl mx-auto w-full">
+    <div class="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+
+      <!-- LEFT: Copy -->
+      <div>
+        <span class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-[#C8A878]/30 bg-[#C8A878]/5 text-[#C8A878] text-xs font-bold uppercase tracking-[0.3em] mb-8 shadow-[0_0_15px_rgba(200,168,120,0.1)]">
+          <span class="w-2 h-2 rounded-full bg-[#C8A878] animate-pulse"></span>
+          PRESENTE EXCLUSIVO PULSARH
+        </span>
+
+        <h1 class="text-4xl md:text-5xl lg:text-[56px] font-black tracking-tighter leading-[1.05] mb-6">
+          SEU TIME <span class="text-[#F5D770] drop-shadow-[0_0_30px_rgba(245,215,112,0.4)]">NAO SE IMPORTA</span><br>
+          COM O TRABALHO.<br>
+          <span class="text-[#A89FC0]">E A CULPA E SUA.</span>
+        </h1>
+
+        <div class="w-24 h-[2px] bg-gradient-to-r from-[#C8A878] to-transparent mb-6"></div>
+
+        <p class="text-lg text-[#A89FC0] font-medium leading-relaxed mb-6 max-w-lg">
+          Times sem proposito claro tem <span class="text-[#F5D770] font-bold">3x mais turnover</span>.
+          A boa noticia? Existe um metodo para mudar isso em <span class="text-white font-semibold">72 horas</span>.
+        </p>
+
+        <p class="text-base text-white/80 font-semibold leading-relaxed mb-8 max-w-lg">
+          Preparamos um conteudo transformador — gratuito — que so a PulsarH consegue entregar.
+          O tipo de conhecimento que voce nao encontra em MBA, livro ou curso online.
+        </p>
+
+        <!-- Trust badges -->
+        <div class="flex flex-wrap gap-5 text-[13px] text-[#A89FC0]">
+          <span class="flex items-center gap-2">
+            <div class="w-5 h-5 rounded-full bg-[#C8A878]/10 border border-[#C8A878]/30 flex items-center justify-center">
+              <svg class="w-3 h-3 text-[#C8A878]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            </div>
+            100% gratuito
+          </span>
+          <span class="flex items-center gap-2">
+            <div class="w-5 h-5 rounded-full bg-[#C8A878]/10 border border-[#C8A878]/30 flex items-center justify-center">
+              <svg class="w-3 h-3 text-[#C8A878]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            </div>
+            Aplicavel hoje
+          </span>
+          <span class="flex items-center gap-2">
+            <div class="w-5 h-5 rounded-full bg-[#C8A878]/10 border border-[#C8A878]/30 flex items-center justify-center">
+              <svg class="w-3 h-3 text-[#C8A878]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            </div>
+            Conteudo exclusivo PulsarH
+          </span>
+        </div>
+      </div>
+
+      <!-- RIGHT: Form -->
+      <div id="hero-form">
+        <div class="glass-strong rounded-3xl p-8 md:p-10 shadow-[0_0_60px_rgba(200,168,120,0.08)] shimmer">
+          <div class="text-center mb-8">
+            <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#C8A878]/15 to-[#6B4E9B]/10 border border-[#C8A878]/25 flex items-center justify-center mx-auto mb-5 shadow-[0_0_30px_rgba(200,168,120,0.15)]">
+              <svg class="w-8 h-8 text-[#F5D770] drop-shadow-[0_0_8px_rgba(245,215,112,0.5)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-black text-white mb-2">Seu Presente Esta Aqui</h3>
+            <p class="text-sm text-[#A89FC0] leading-relaxed">
+              Conteudo transformador que muda a forma como voce lidera — <span class="text-[#C8A878] font-semibold">criado exclusivamente pela PulsarH</span> para lideres que querem mais do que teoria.
+            </p>
+          </div>
+
+          <form id="leadFormM2" class="space-y-4">
+            <input type="text" name="nome" required placeholder="Seu nome completo" class="w-full px-4 py-3.5 rounded-xl text-sm font-medium">
+            <input type="email" name="email" required placeholder="Seu melhor email" class="w-full px-4 py-3.5 rounded-xl text-sm font-medium">
+            <input type="tel" name="telefone" required placeholder="WhatsApp (com DDD)" class="w-full px-4 py-3.5 rounded-xl text-sm font-medium">
+            <input type="text" name="cargo" required placeholder="Seu cargo atual" class="w-full px-4 py-3.5 rounded-xl text-sm font-medium">
+            <select name="dor" required class="w-full px-4 py-3.5 rounded-xl text-sm font-medium appearance-none">
+              <option value="" disabled selected>Qual sua maior preocupacao com IA?</option>
+              <option value="engajamento">Meu time nao tem engajamento</option>
+              <option value="retencao">Nao consigo reter talentos</option>
+              <option value="ia">Nao sei usar IA na gestao</option>
+              <option value="tempo">Falta tempo para liderar de verdade</option>
+              <option value="feedback">Comunicacao e feedback sao meu ponto fraco</option>
+              <option value="produtividade">Preciso entregar mais com o mesmo time</option>
+              <option value="proposito">Meu time nao entende o proposito do trabalho</option>
+              <option value="outro">Outra dor</option>
+            </select>
+            <select name="tamanho_time" required class="w-full px-4 py-3.5 rounded-xl text-sm font-medium appearance-none">
+              <option value="" disabled selected>Quantas pessoas voce lidera?</option>
+              <option value="1-5">1 a 5 pessoas</option>
+              <option value="6-15">6 a 15 pessoas</option>
+              <option value="16-50">16 a 50 pessoas</option>
+              <option value="50+">Mais de 50 pessoas</option>
+              <option value="0">Ainda nao lidero, mas quero comecar</option>
+            </select>
+
+            <button type="submit" class="w-full py-4 rounded-full bg-[#C8A878] hover:bg-[#F5D770] text-[#020202] font-black text-base uppercase tracking-widest transition-all duration-300 glow-gold glow-gold-hover mt-2 flex items-center justify-center gap-2">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/></svg>
+              QUERO MEU PRESENTE GRATUITO
+            </button>
+
+            <p class="text-center text-[11px] text-[#8892A4] mt-3">
+              Seus dados estao protegidos. Usamos apenas para entregar conteudo de valor.
+            </p>
+          </form>
+
+          <!-- Success state -->
+          <div id="formSuccess" class="hidden text-center py-8">
+            <div class="w-16 h-16 rounded-full bg-[#C8A878]/20 border border-[#C8A878]/30 flex items-center justify-center mx-auto mb-4 shadow-[0_0_30px_rgba(200,168,120,0.2)]">
+              <svg class="w-8 h-8 text-[#F5D770]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">Presente desbloqueado!</h3>
+            <p class="text-sm text-[#A89FC0] mb-6">Seu conteudo exclusivo esta logo abaixo</p>
+            <a href="#conteudo" class="text-[#F5D770] font-black flex items-center justify-center gap-2 hover:gap-4 transition-all duration-300 uppercase tracking-wider text-sm drop-shadow-[0_0_6px_rgba(245,215,112,0.4)]">
+              ACESSAR AGORA
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!-- CONTEUDO GATED -->
+<!-- ============================================ -->
+<div id="conteudo" class="content-gate">
+
+<!-- ============================================ -->
+<!-- CHOQUE DE REALIDADE (20%) -->
+<!-- ============================================ -->
+<section class="py-20 md:py-28 px-6 relative overflow-hidden bg-brand-intense">
+  <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-[#6B4E9B] rounded-full blur-[150px] opacity-15 pointer-events-none"></div>
+  <div class="absolute bottom-0 left-1/4 w-[400px] h-[400px] bg-[#C8A878] rounded-full blur-[200px] opacity-[0.06] pointer-events-none"></div>
+
+  <div class="max-w-4xl mx-auto">
+    <div class="text-center mb-16">
+      <span class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-red-500/20 bg-red-500/5 text-red-400 text-xs font-bold uppercase tracking-[0.3em] mb-6">
+        <span class="w-2 h-2 rounded-full bg-red-400 animate-pulse"></span>
+        A VERDADE QUE NINGUEM TE CONTA
+      </span>
+      <h2 class="text-3xl md:text-5xl font-black tracking-tighter leading-[1.05] text-white mb-6">
+        O QUE VOCE <span class="text-[#F5D770]">NAO SABE</span><br>
+        ESTA CUSTANDO SEU <span class="text-red-400">MELHOR TALENTO</span>
+      </h2>
+    </div>
+
+    <!-- Stat cards -->
+    <div class="grid md:grid-cols-3 gap-6 mb-16">
+      <div class="glass rounded-2xl p-8 text-center hover:border-[#C8A878]/20 hover:shadow-[0_0_30px_rgba(200,168,120,0.08)] transition-all duration-500">
+        <span class="text-[#F5D770] text-5xl font-black block mb-3 drop-shadow-[0_0_20px_rgba(245,215,112,0.3)]">3x</span>
+        <p class="text-[#A89FC0] text-sm font-medium leading-relaxed">mais turnover em times onde o lider <span class="text-white font-semibold">nao articula o proposito</span> do trabalho</p>
+      </div>
+      <div class="glass rounded-2xl p-8 text-center hover:border-[#C8A878]/20 hover:shadow-[0_0_30px_rgba(200,168,120,0.08)] transition-all duration-500">
+        <span class="text-[#F5D770] text-5xl font-black block mb-3 drop-shadow-[0_0_20px_rgba(245,215,112,0.3)]">73%</span>
+        <p class="text-[#A89FC0] text-sm font-medium leading-relaxed">dos lideres <span class="text-white font-semibold">nao conseguem explicar</span> em 2 frases por que seu time existe</p>
+      </div>
+      <div class="glass rounded-2xl p-8 text-center hover:border-[#C8A878]/20 hover:shadow-[0_0_30px_rgba(200,168,120,0.08)] transition-all duration-500">
+        <span class="text-[#F5D770] text-5xl font-black block mb-3 drop-shadow-[0_0_20px_rgba(245,215,112,0.3)]">82%</span>
+        <p class="text-[#A89FC0] text-sm font-medium leading-relaxed">dos profissionais dizem que <span class="text-white font-semibold">trocariam de emprego</span> por um com mais significado</p>
+      </div>
+    </div>
+
+    <!-- Reality text -->
+    <div class="glass rounded-3xl p-10 md:p-12 max-w-3xl mx-auto">
+      <div class="flex items-start gap-4 mb-6">
+        <div class="w-1 h-16 bg-gradient-to-b from-red-400 to-transparent rounded-full flex-shrink-0 mt-1"></div>
+        <p class="text-lg md:text-xl text-white font-semibold leading-relaxed">
+          IA processa 1 bilhao de dados em segundos. Mas nao cria <span class="italic text-[#A89FC0]">significado</span>.
+        </p>
+      </div>
+      <p class="text-[#A89FC0] text-base leading-relaxed mb-6">
+        Seu time nao quer mais um dashboard, mais uma reuniao de alinhamento, mais um OKR copiado.
+        Seu time quer saber <span class="text-[#C8A878] font-bold">por que acorda cedo pra trabalhar com voce</span>.
+      </p>
+      <p class="text-[#A89FC0] text-base leading-relaxed">
+        Se voce — o lider — nao sabe responder isso em 2 frases, seu melhor talento ja esta olhando o LinkedIn.
+        Nao por salario. Por <span class="text-white font-semibold">sentido</span>.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Gold divider -->
+<div class="bg-brand"><div class="max-w-5xl mx-auto px-6"><div class="gold-line"></div></div></div>
+
+<!-- ============================================ -->
+<!-- CONTEUDO TRANSFORMADOR (50%) -->
+<!-- ============================================ -->
+<section class="py-20 md:py-28 px-6 relative overflow-hidden bg-brand">
+  <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-[#0F1342] rounded-full blur-[150px] opacity-20 pointer-events-none"></div>
+  <div class="absolute top-1/3 right-0 w-[400px] h-[400px] bg-[#C8A878] rounded-full blur-[200px] opacity-[0.06] pointer-events-none"></div>
+  <div class="absolute top-0 left-1/2 w-[300px] h-[300px] bg-[#6B4E9B] rounded-full blur-[180px] opacity-10 pointer-events-none"></div>
+
+  <div class="max-w-4xl mx-auto">
+
+    <div class="text-center mb-16">
+      <span class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-[#C8A878]/20 bg-[#C8A878]/5 text-[#C8A878] text-xs font-bold uppercase tracking-[0.3em] mb-6 shadow-[0_0_15px_rgba(200,168,120,0.1)]">
+        <span class="w-2 h-2 rounded-full bg-[#C8A878] animate-pulse"></span>
+        SEU PRESENTE EXCLUSIVO
+      </span>
+      <h2 class="text-3xl md:text-5xl font-black tracking-tighter leading-[1.05] text-white mb-6">
+        INSTALE <span class="text-[#F5D770] drop-shadow-[0_0_25px_rgba(245,215,112,0.3)]">PROPOSITO REAL</span><br>
+        NA SUA LIDERANCA HOJE
+      </h2>
+      <p class="text-[#A89FC0] text-lg max-w-2xl mx-auto leading-relaxed">
+        3 exercicios praticos que transformam a dinamica do seu time.
+        Baseados no Golden Circle de Simon Sinek e no Metodo S.E.R PulsarH.
+        <span class="text-white font-semibold">Nenhum exige mais de 30 minutos. Todos mudam o jogo.</span>
+      </p>
+    </div>
+
+    <!-- ====================== -->
+    <!-- EXERCICIO 1 -->
+    <!-- ====================== -->
+    <div class="mb-16">
+      <div class="flex items-center gap-4 mb-8">
+        <div class="step-number">1</div>
+        <div>
+          <span class="text-[#C8A878] text-xs font-bold uppercase tracking-[0.3em] block mb-1">EXERCICIO 1</span>
+          <h3 class="text-2xl md:text-3xl font-black tracking-tight text-white">Reuniao Pelo Proposito</h3>
+        </div>
+      </div>
+
+      <div class="glass rounded-3xl p-8 md:p-10">
+        <p class="text-white text-lg font-semibold mb-6 leading-relaxed">
+          Abra toda reuniao conectando a tarefa ao impacto real.
+          <span class="text-[#C8A878]">Antes de falar o que, fale o por que.</span>
+        </p>
+
+        <div class="bg-white/[0.02] rounded-2xl p-6 mb-6 border border-white/[0.04]">
+          <p class="text-[#C8A878] text-xs font-bold uppercase tracking-[0.2em] mb-4">COMO APLICAR:</p>
+          <div class="space-y-4">
+            <div class="flex items-start gap-3">
+              <span class="text-[#F5D770] font-black text-sm mt-0.5">01.</span>
+              <p class="text-[#A89FC0] text-sm leading-relaxed">Na proxima reuniao, <span class="text-white font-medium">nao comece pela pauta</span>. Comece com 2 frases: qual problema real essa tarefa resolve e por que ela importa agora.</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="text-[#F5D770] font-black text-sm mt-0.5">02.</span>
+              <p class="text-[#A89FC0] text-sm leading-relaxed"><span class="text-white font-medium">Use a formula:</span> "Nos estamos fazendo [TAREFA] porque [IMPACTO NO CLIENTE]. Se fizermos bem, [RESULTADO REAL]."</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="text-[#F5D770] font-black text-sm mt-0.5">03.</span>
+              <p class="text-[#A89FC0] text-sm leading-relaxed">Observe a reacao do time. <span class="text-white font-medium">Meca a diferenca de engajamento</span> entre reunioes com e sem esse ritual.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-3 text-sm">
+          <svg class="w-5 h-5 text-[#6B4E9B]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+          </svg>
+          <span class="text-[#A89FC0] italic">Base: Golden Circle (Simon Sinek) + Sensibilizar (Metodo S.E.R PulsarH)</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ====================== -->
+    <!-- EXERCICIO 2 -->
+    <!-- ====================== -->
+    <div class="mb-16">
+      <div class="flex items-center gap-4 mb-8">
+        <div class="step-number">2</div>
+        <div>
+          <span class="text-[#C8A878] text-xs font-bold uppercase tracking-[0.3em] block mb-1">EXERCICIO 2</span>
+          <h3 class="text-2xl md:text-3xl font-black tracking-tight text-white">Sua Causa Justa em 2 Frases</h3>
+        </div>
+      </div>
+
+      <div class="glass rounded-3xl p-8 md:p-10">
+        <p class="text-white text-lg font-semibold mb-6 leading-relaxed">
+          Articule a causa pela qual voce lidera.
+          <span class="text-[#C8A878]">Nao a meta. Nao o cargo. A causa que daria energia mesmo sem salario.</span>
+        </p>
+
+        <div class="bg-white/[0.02] rounded-2xl p-6 mb-6 border border-white/[0.04]">
+          <p class="text-[#C8A878] text-xs font-bold uppercase tracking-[0.2em] mb-4">EXERCICIO — 15 MINUTOS:</p>
+          <div class="space-y-4">
+            <div class="flex items-start gap-3">
+              <span class="text-[#F5D770] font-black text-sm mt-0.5">01.</span>
+              <p class="text-[#A89FC0] text-sm leading-relaxed">Responda: <span class="text-white font-medium">"Se eu saisse dessa empresa amanha, o que eu gostaria que meu time continuasse fazendo sem mim?"</span></p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="text-[#F5D770] font-black text-sm mt-0.5">02.</span>
+              <p class="text-[#A89FC0] text-sm leading-relaxed">Reduza a <span class="text-white font-medium">exatamente 2 frases</span>. Sem jargao corporativo. So a verdade crua do porque voce lidera.</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="text-[#F5D770] font-black text-sm mt-0.5">03.</span>
+              <p class="text-[#A89FC0] text-sm leading-relaxed"><span class="text-white font-medium">Teste:</span> leia em voz alta. Se nao sentir nada, reescreva. Sua Causa Justa deve gerar um peso no peito — de responsabilidade e orgulho ao mesmo tempo.</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="text-[#F5D770] font-black text-sm mt-0.5">04.</span>
+              <p class="text-[#A89FC0] text-sm leading-relaxed">Compartilhe com seu time. <span class="text-white font-medium">Nao como discurso — como conversa.</span> Peca que cada um escreva a sua.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-gold rounded-2xl p-6 shadow-[0_0_20px_rgba(200,168,120,0.08)]">
+          <p class="text-[#C8A878] text-xs font-bold uppercase tracking-[0.2em] mb-3">EXEMPLO REAL:</p>
+          <p class="text-white text-base italic leading-relaxed">
+            "Eu lidero para provar que gestao nao precisa ser sofrimento. Que um time pode entregar resultado absurdo
+            e ir pra casa sentindo orgulho — nao exaustao."
+          </p>
+          <p class="text-[#A89FC0] text-sm mt-3 font-medium">— Rodrigo Braga, fundador PulsarH.AI</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ====================== -->
+    <!-- EXERCICIO 3 -->
+    <!-- ====================== -->
+    <div class="mb-8">
+      <div class="flex items-center gap-4 mb-8">
+        <div class="step-number">3</div>
+        <div>
+          <span class="text-[#C8A878] text-xs font-bold uppercase tracking-[0.3em] block mb-1">EXERCICIO 3</span>
+          <h3 class="text-2xl md:text-3xl font-black tracking-tight text-white">Reescreva 3 Delegacoes</h3>
+        </div>
+      </div>
+
+      <div class="glass rounded-3xl p-8 md:p-10">
+        <p class="text-white text-lg font-semibold mb-6 leading-relaxed">
+          Pegue 3 delegacoes recentes e reescreva comecando pelo por que.
+          <span class="text-[#C8A878]">Meca a diferenca no engajamento do time.</span>
+        </p>
+
+        <div class="bg-white/[0.02] rounded-2xl p-6 mb-6 border border-white/[0.04]">
+          <p class="text-[#C8A878] text-xs font-bold uppercase tracking-[0.2em] mb-4">ANTES vs DEPOIS:</p>
+
+          <div class="mb-6">
+            <span class="text-red-400 text-xs font-bold uppercase tracking-wider">ANTES (como a maioria delega):</span>
+            <div class="bg-red-500/5 border border-red-500/10 rounded-xl p-4 mt-2">
+              <p class="text-[#8892A4] text-sm italic">"Preciso do relatorio de vendas ate sexta. Inclui os dados de Q1 e Q2."</p>
+            </div>
+          </div>
+
+          <div class="mb-6">
+            <span class="text-[#C8A878] text-xs font-bold uppercase tracking-wider">DEPOIS (lider que comeca pelo porque):</span>
+            <div class="bg-[#C8A878]/5 border border-[#C8A878]/15 rounded-xl p-4 mt-2 shadow-[0_0_15px_rgba(200,168,120,0.05)]">
+              <p class="text-white text-sm italic">"O board vai decidir se expande pro Nordeste. O relatorio Q1/Q2 e o que vai mostrar se temos musculo pra isso. Voce e a pessoa mais indicada porque conhece os numeros melhor que eu. Preciso ate sexta."</p>
+            </div>
+          </div>
+
+          <p class="text-[#A89FC0] text-sm leading-relaxed">
+            <span class="text-white font-semibold">A diferenca?</span> No primeiro, a pessoa faz uma tarefa. No segundo,
+            se sente <span class="text-[#C8A878]">parte de uma decisao estrategica</span>. O esforco e o mesmo. O engajamento muda completamente.
+          </p>
+        </div>
+
+        <div class="bg-white/[0.02] rounded-2xl p-6 border border-white/[0.04]">
+          <p class="text-[#C8A878] text-xs font-bold uppercase tracking-[0.2em] mb-4">SEU EXERCICIO AGORA:</p>
+          <div class="space-y-3">
+            <div class="flex items-start gap-3">
+              <span class="text-[#F5D770] font-black text-sm mt-0.5">01.</span>
+              <p class="text-[#A89FC0] text-sm leading-relaxed">Abra seu email ou chat. <span class="text-white font-medium">Encontre 3 delegacoes</span> dos ultimos 7 dias.</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="text-[#F5D770] font-black text-sm mt-0.5">02.</span>
+              <p class="text-[#A89FC0] text-sm leading-relaxed">Reescreva usando: <span class="text-white font-medium">[CONTEXTO DO POR QUE] + [POR QUE ESSA PESSOA] + [O QUE PRECISA]</span></p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="text-[#F5D770] font-black text-sm mt-0.5">03.</span>
+              <p class="text-[#A89FC0] text-sm leading-relaxed">Use essa estrutura por <span class="text-white font-medium">1 semana</span>. Observe o que muda.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Resultado -->
+    <div class="glass-gold rounded-3xl p-8 md:p-10 text-center max-w-3xl mx-auto shadow-[0_0_40px_rgba(200,168,120,0.1)]">
+      <h3 class="text-xl font-bold text-white mb-6">O que muda quando voce aplica os 3 exercicios:</h3>
+      <div class="grid sm:grid-cols-3 gap-6">
+        <div>
+          <span class="text-[#F5D770] text-3xl font-black block mb-2 drop-shadow-[0_0_15px_rgba(245,215,112,0.3)]">+40%</span>
+          <p class="text-[#A89FC0] text-sm">engajamento em reunioes</p>
+        </div>
+        <div>
+          <span class="text-[#F5D770] text-3xl font-black block mb-2 drop-shadow-[0_0_15px_rgba(245,215,112,0.3)]">-3x</span>
+          <p class="text-[#A89FC0] text-sm">risco de perder talentos</p>
+        </div>
+        <div>
+          <span class="text-[#F5D770] text-3xl font-black block mb-2 drop-shadow-[0_0_15px_rgba(245,215,112,0.3)]">72h</span>
+          <p class="text-[#A89FC0] text-sm">para sentir a diferenca</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Gold divider -->
+<div class="bg-brand-intense"><div class="max-w-5xl mx-auto px-6"><div class="gold-line"></div></div></div>
+
+<!-- ============================================ -->
+<!-- SECAO PITCH — IMERSAO INDIVIDUAL (30%) -->
+<!-- ============================================ -->
+<section class="py-20 md:py-28 px-6 relative overflow-hidden bg-brand-intense">
+  <div class="absolute top-0 left-1/4 w-[600px] h-[600px] bg-[#6B4E9B] rounded-full blur-[180px] opacity-20 pointer-events-none"></div>
+  <div class="absolute bottom-1/4 right-0 w-[500px] h-[500px] bg-[#C8A878] rounded-full blur-[200px] opacity-[0.08] pointer-events-none"></div>
+  <div class="absolute top-1/2 left-0 w-[300px] h-[300px] bg-[#F5D770] rounded-full blur-[180px] opacity-[0.04] pointer-events-none"></div>
+
+  <div class="max-w-4xl mx-auto">
+
+    <!-- Transition -->
+    <div class="text-center mb-16">
+      <div class="glass rounded-3xl p-10 inline-block mb-10 shadow-[0_0_30px_rgba(200,168,120,0.06)]">
+        <p class="text-white text-lg md:text-xl font-semibold leading-relaxed max-w-2xl">
+          Voce acabou de experimentar o nivel de conteudo que a <span class="text-[#F5D770] font-black">PulsarH</span> entrega.
+          Mas isso foi apenas o alicerce.<br><br>
+          <span class="text-[#A89FC0] text-base font-medium">
+            Existem mais 9 dimensoes que separam o lider comum do lider que o mercado disputa.
+            E eu quero te mostrar cada uma delas — <span class="text-[#C8A878] font-bold">pessoalmente</span>.
+          </span>
+        </p>
+      </div>
+
+      <span class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-[#C8A878]/30 bg-[#C8A878]/5 text-[#C8A878] text-xs font-bold uppercase tracking-[0.3em] mb-6 shadow-[0_0_15px_rgba(200,168,120,0.1)]">
+        <span class="w-2 h-2 rounded-full bg-[#F5D770] animate-pulse"></span>
+        CONVITE EXCLUSIVO
+      </span>
+      <h2 class="text-3xl md:text-5xl font-black tracking-tighter leading-[1.05] text-white mb-4">
+        IMERSAO <span class="text-[#F5D770] drop-shadow-[0_0_30px_rgba(245,215,112,0.4)]">INDIVIDUAL</span><br>
+        <span class="text-[#A89FC0]">COM RODRIGO BRAGA</span>
+      </h2>
+      <p class="text-lg text-[#C8A878] font-bold mt-4">Essencia Hibrida: O Novo Lider Que o Mercado Nao Consegue Ignorar</p>
+    </div>
+
+    <!-- INDIVIDUAL HIGHLIGHT -->
+    <div class="relative group mb-12">
+      <div class="absolute -inset-[2px] rounded-3xl bg-gradient-to-br from-[#F5D770]/50 via-[#C8A878]/30 to-[#6B4E9B]/20 blur-sm opacity-70 group-hover:opacity-100 transition-all duration-1000"></div>
+      <div class="relative rounded-3xl overflow-hidden border border-[#C8A878]/20 bg-[#C8A878]/[0.04] backdrop-blur-xl p-8 md:p-12">
+        <div class="text-center">
+          <div class="w-20 h-20 rounded-full bg-gradient-to-br from-[#C8A878]/20 to-[#6B4E9B]/10 border border-[#C8A878]/30 flex items-center justify-center mx-auto mb-6 shadow-[0_0_40px_rgba(200,168,120,0.2)]">
+            <svg class="w-10 h-10 text-[#F5D770] drop-shadow-[0_0_10px_rgba(245,215,112,0.5)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+            </svg>
+          </div>
+          <span class="text-[#F5D770] text-xs font-black uppercase tracking-[0.4em] block mb-4">ISSO NAO E UM CURSO EM GRUPO</span>
+          <h3 class="text-2xl md:text-3xl font-black text-white leading-tight mb-4">
+            Sou eu, Rodrigo Braga, entrando numa<br>
+            <span class="text-[#F5D770]">imersao individual com voce.</span>
+          </h3>
+          <p class="text-[#A89FC0] text-base leading-relaxed max-w-2xl mx-auto">
+            Nao e aula gravada pra 10.000 pessoas assistirem no automatico. E eu dedicando minha atencao, meu metodo e minha experiencia ao <span class="text-white font-semibold">seu desafio especifico</span>. Voce sai com plano de acao sob medida, nao com anotacoes genericas.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Promise -->
+    <div class="glass rounded-3xl p-8 md:p-12 mb-12 shadow-[0_0_30px_rgba(200,168,120,0.06)]">
+      <p class="text-xl md:text-2xl text-white font-bold leading-relaxed text-center max-w-3xl mx-auto">
+        Instale o sistema operacional do lider hibrido em <span class="text-[#F5D770]">4 modulos</span> e torne-se
+        o profissional que a diretoria promove, o time respeita e o mercado disputa —
+        <span class="text-[#C8A878]">sem trabalhar mais horas, sem virar programador e sem mais um curso que vira gaveta.</span>
+      </p>
+    </div>
+
+    <!-- What is Hybrid Leader -->
+    <div class="glass rounded-3xl p-8 md:p-10 mb-12">
+      <h3 class="text-2xl font-black text-white mb-6">Por que "Lider Hibrido"?</h3>
+      <div class="space-y-4 text-[#A89FC0] text-base leading-relaxed">
+        <p>Pela primeira vez, lideres gerenciam <span class="text-white font-semibold">pessoas e agentes de inteligencia artificial</span> na mesma operacao. Jensen Huang projeta 50.000 humanos ao lado de <span class="text-[#F5D770] font-bold">100 milhoes de agentes</span>.</p>
+        <p>O Lider Hibrido orquestra essas duas forcas — <span class="text-[#C8A878] font-bold">gente e IA.gentes</span> — na mesma direcao. Ele nao compete com maquinas. <span class="text-white font-semibold">Ele lidera maquinas e pessoas ao mesmo tempo.</span></p>
+        <p>O estudo NBER prova: a correlacao entre liderar gente e liderar IA.gentes e de <span class="text-[#F5D770] font-bold">0,81</span>. Quem e bom lider de gente, e bom lider de agentes. A imersao instala as duas capacidades em voce.</p>
+      </div>
+    </div>
+
+    <!-- 4 Modules -->
+    <div class="mb-12">
+      <h3 class="text-2xl font-black text-white mb-3 text-center">O Que Voce Recebe na Imersao</h3>
+      <p class="text-[#A89FC0] text-base text-center mb-8">4 Modulos. 12 Aulas. Comigo, do seu lado.</p>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="glass rounded-2xl p-8 hover:border-[#C8A878]/20 hover:shadow-[0_0_25px_rgba(200,168,120,0.08)] transition-all duration-500">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="text-[#F5D770] text-2xl font-black drop-shadow-[0_0_10px_rgba(245,215,112,0.3)]">M1</span>
+            <div class="w-px h-8 bg-[#C8A878]/30"></div>
+            <h4 class="text-white font-bold">O CHAO SUMIU</h4>
+          </div>
+          <p class="text-[#A89FC0] text-sm leading-relaxed">
+            Os dados que Google, McKinsey e Microsoft ja sabem sobre o futuro do seu cargo.
+            Voce entra achando que esta bem. Sai sabendo que precisa agir <span class="text-white">agora</span>.
+          </p>
+        </div>
+        <div class="glass rounded-2xl p-8 hover:border-[#C8A878]/20 hover:shadow-[0_0_25px_rgba(200,168,120,0.08)] transition-all duration-500">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="text-[#F5D770] text-2xl font-black drop-shadow-[0_0_10px_rgba(245,215,112,0.3)]">M2</span>
+            <div class="w-px h-8 bg-[#C8A878]/30"></div>
+            <h4 class="text-white font-bold">AS 5 DIMENSOES</h4>
+          </div>
+          <p class="text-[#A89FC0] text-sm leading-relaxed">
+            Mapa de competencias: Conector, Hiperprodutivo, Humilde, Sistemico, Humano.
+            Descubra <span class="text-white">onde esta forte e onde esta vulneravel</span>.
+          </p>
+        </div>
+        <div class="glass rounded-2xl p-8 hover:border-[#C8A878]/20 hover:shadow-[0_0_25px_rgba(200,168,120,0.08)] transition-all duration-500">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="text-[#F5D770] text-2xl font-black drop-shadow-[0_0_10px_rgba(245,215,112,0.3)]">M3</span>
+            <div class="w-px h-8 bg-[#C8A878]/30"></div>
+            <h4 class="text-white font-bold">3 FERRAMENTAS EM 7 DIAS</h4>
+          </div>
+          <p class="text-[#A89FC0] text-sm leading-relaxed">
+            Sua primeira 1:1 transformadora, sua primeira conversa dificil com metodo e
+            <span class="text-white">seu primeiro IA.gente funcionando na operacao real</span>.
+          </p>
+        </div>
+        <div class="glass rounded-2xl p-8 hover:border-[#C8A878]/20 hover:shadow-[0_0_25px_rgba(200,168,120,0.08)] transition-all duration-500">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="text-[#F5D770] text-2xl font-black drop-shadow-[0_0_10px_rgba(245,215,112,0.3)]">M4</span>
+            <div class="w-px h-8 bg-[#C8A878]/30"></div>
+            <h4 class="text-white font-bold">SISTEMA OPERACIONAL COMPLETO</h4>
+          </div>
+          <p class="text-[#A89FC0] text-sm leading-relaxed">
+            Os 10 Mandamentos + Ciclo PULSAR com IA.gentes.
+            <span class="text-white">O mapa completo</span> do lider hibrido montado com voce.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 1:1 GOLD — highest highlight -->
+    <div class="relative group mb-12">
+      <div class="absolute -inset-[3px] rounded-3xl bg-gradient-to-r from-[#C8A878] via-[#F5D770] to-[#C8A878] blur-md opacity-40 group-hover:opacity-70 transition-all duration-1000 animate-pulse"></div>
+      <div class="relative rounded-3xl overflow-hidden border-2 border-[#C8A878]/40 bg-gradient-to-br from-[#C8A878]/[0.08] to-[#6B4E9B]/[0.04] backdrop-blur-xl p-8 md:p-12">
+        <div class="flex flex-col md:flex-row items-center gap-8">
+          <div class="w-24 h-24 rounded-2xl bg-gradient-to-br from-[#C8A878]/20 to-[#F5D770]/10 border-2 border-[#C8A878]/40 flex items-center justify-center flex-shrink-0 shadow-[0_0_50px_rgba(200,168,120,0.25)]">
+            <svg class="w-12 h-12 text-[#F5D770] drop-shadow-[0_0_12px_rgba(245,215,112,0.6)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-[#F5D770] text-xs font-black uppercase tracking-[0.4em] block mb-2">ENTREGA QUE NINGUEM OFERECE POR ESSE PRECO</span>
+            <h3 class="text-xl md:text-2xl font-black text-white mb-3">Reuniao 1:1 Individual de 30 Minutos com Rodrigo Braga</h3>
+            <p class="text-[#A89FC0] text-base leading-relaxed">
+              Diagnostico personalizado da sua lideranca. Plano de acao sob medida pro seu desafio.
+              <span class="text-white font-bold">Conversa de lider pra lider — nao call de onboarding generico.</span>
+              Essa reuniao sozinha vale mais que a imersao inteira. E esta incluida.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mounjaro -->
+    <div class="glass rounded-3xl p-8 md:p-10 mb-12 text-center">
+      <p class="text-xl md:text-2xl text-white font-bold leading-relaxed max-w-3xl mx-auto mb-4">
+        Assim como Mounjaro emagrece sem academia e dieta, essa imersao transforma sua lideranca
+        <span class="text-[#F5D770]">sem teoria inutil e sem mais horas no escritorio</span>.
+      </p>
+      <p class="text-[#A89FC0] text-base leading-relaxed max-w-2xl mx-auto">
+        E metodo instalado na sua operacao real — nao conteudo pra assistir e esquecer.
+        12 aulas de ~15 minutos + 1:1 individual comigo. <span class="text-white font-semibold">Menos de 3 horas. Transformacao de carreira.</span>
+      </p>
+    </div>
+
+    <!-- Objections -->
+    <div class="mb-12">
+      <h3 class="text-xl font-bold text-white mb-8 text-center">Voce esta pensando...</h3>
+      <div class="space-y-4">
+        <div class="glass rounded-2xl p-6 hover:border-[#C8A878]/15 transition-all duration-500">
+          <p class="text-[#F5D770] font-bold mb-2">"Ja fiz cursos de lideranca."</p>
+          <p class="text-[#A89FC0] text-sm leading-relaxed">Isso nao e curso. E sistema operacional instalado com acompanhamento individual. Nenhum curso te ensinou a criar um agente de IA e liderar gente ao mesmo tempo. <span class="text-white font-medium">Se nada mudar em 7 dias, devolvo seu dinheiro.</span></p>
+        </div>
+        <div class="glass rounded-2xl p-6 hover:border-[#C8A878]/15 transition-all duration-500">
+          <p class="text-[#F5D770] font-bold mb-2">"Nao tenho tempo."</p>
+          <p class="text-[#A89FC0] text-sm leading-relaxed">12 aulas de ~15 minutos. <span class="text-white font-medium">Menos de 3 horas no total.</span> + 30 minutos de 1:1 comigo focando onde aperta. Zero teoria. So o que muda resultado.</p>
+        </div>
+        <div class="glass rounded-2xl p-6 hover:border-[#C8A878]/15 transition-all duration-500">
+          <p class="text-[#F5D770] font-bold mb-2">"R$297 e muito barato — deve ser raso."</p>
+          <p class="text-[#A89FC0] text-sm leading-relaxed">O preco e um filtro. Quero achar lideres comprometidos. Por isso entrego desproporcional: <span class="text-white font-medium">12 aulas + 1:1 individual + seu primeiro IA.gente funcionando</span>. Se fosse pelo valor real, seria R$2.000+. Estou investindo em voce antes de voce investir na formacao completa.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA FINAL -->
+    <div class="text-center py-12">
+      <div class="mb-8">
+        <span class="text-[#8892A4] text-base line-through block mb-2">De R$2.000+</span>
+        <div class="flex items-center justify-center gap-4 mb-2">
+          <span class="text-white text-xl font-medium">Imersao individual por</span>
+        </div>
+        <span class="text-[#F5D770] text-7xl md:text-8xl font-black drop-shadow-[0_0_40px_rgba(245,215,112,0.5)] block">R$297</span>
+        <p class="text-[#A89FC0] text-sm mt-3">12 aulas + 1:1 com Rodrigo Braga + seu primeiro IA.gente</p>
+      </div>
+
+      <a href="https://pay.hotmart.com/M103870619B" target="_blank" rel="noopener" class="inline-flex items-center gap-3 px-14 py-7 rounded-full bg-[#C8A878] hover:bg-[#F5D770] text-[#020202] font-black text-xl uppercase tracking-widest transition-all duration-300 pulse-cta mb-4">
+        QUERO MINHA IMERSAO INDIVIDUAL
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+        </svg>
+      </a>
+
+      <p class="text-[#A89FC0] text-sm mt-6 flex items-center justify-center gap-4 flex-wrap">
+        <span class="flex items-center gap-1.5">
+          <svg class="w-4 h-4 text-[#C8A878]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"/></svg>
+          Pagamento seguro
+        </span>
+        <span class="flex items-center gap-1.5">
+          <svg class="w-4 h-4 text-[#C8A878]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+          Garantia 7 dias
+        </span>
+        <span class="flex items-center gap-1.5">
+          <svg class="w-4 h-4 text-[#C8A878]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"/></svg>
+          Acesso imediato
+        </span>
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!-- FOOTER -->
+<!-- ============================================ -->
+<footer class="py-12 px-6 border-t border-[#C8A878]/[0.08] bg-brand">
+  <div class="max-w-4xl mx-auto text-center">
+    <div class="flex items-center justify-center gap-3 mb-4">
+      <img src="./assets/logo-pulsarh.png" alt="PulsarH" class="h-[32px] w-auto drop-shadow-[0_0_8px_rgba(200,168,120,0.3)]">
+      <span class="text-lg font-black tracking-tight">
+        <span class="text-white">PulsarH</span><span class="text-ai-gradient">.AI</span>
+      </span>
+    </div>
+    <p class="text-[#A89FC0] text-sm mb-2">A revolucao do lider hibrido comeca aqui.</p>
+    <p class="text-[#8892A4]/50 text-xs">&copy; 2026 PulsarH.AI — Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+</div><!-- end content-gate -->
+
+<!-- ============================================ -->
+<!-- JAVASCRIPT -->
+<!-- ============================================ -->
+<script>
+  const form = document.getElementById('leadFormM2');
+  const contentGate = document.getElementById('conteudo');
+  const formSuccess = document.getElementById('formSuccess');
+
+  if (localStorage.getItem('pulsarh_lead_m2')) {
+    contentGate.classList.add('unlocked');
+    form.style.display = 'none';
+    formSuccess.classList.remove('hidden');
+  }
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const formData = new FormData(form);
+    const lead = {
+      nome: formData.get('nome'),
+      email: formData.get('email'),
+      telefone: formData.get('telefone'),
+      cargo: formData.get('cargo'),
+      dor: formData.get('dor'),
+      tamanho_time: formData.get('tamanho_time'),
+      origem: 'm1-porque',
+      timestamp: new Date().toISOString(),
+      pagina: 'Comece Pelo Porque'
+    };
+    localStorage.setItem('pulsarh_lead_m2', JSON.stringify(lead));
+    const allLeads = JSON.parse(localStorage.getItem('pulsarh_leads') || '[]');
+    allLeads.push(lead);
+    localStorage.setItem('pulsarh_leads', JSON.stringify(allLeads));
+    // Envia lead para API do War Room (fire-and-forget)
+    fetch('https://pulsarh-warroom.vercel.app/api/leads', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(lead)
+    }).catch(() => {});
+    contentGate.classList.add('unlocked');
+    form.style.display = 'none';
+    formSuccess.classList.remove('hidden');
+    setTimeout(() => {
+      document.getElementById('conteudo').scrollIntoView({ behavior: 'smooth' });
+    }, 500);
+  });
+
+  const nav = document.querySelector('nav');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      nav.classList.add('py-3', 'shadow-[0_0_30px_rgba(200,168,120,0.08)]');
+      nav.classList.remove('py-4');
+    } else {
+      nav.classList.remove('py-3', 'shadow-[0_0_30px_rgba(200,168,120,0.08)]');
+      nav.classList.add('py-4');
+    }
+  });
+</script>
+
+</body>
+</html>
